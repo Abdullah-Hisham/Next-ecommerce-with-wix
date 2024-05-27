@@ -63,7 +63,9 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
         <div className="h-[2px] bg-gray-100" />
         {/* REVIEWS */}
         <h1 className="text-2xl">User Reviews</h1>
-        good product
+                <Suspense>
+                        <Reviews productId={product._id!} />
+                </Suspense>
         </div>
         </div>
         );
