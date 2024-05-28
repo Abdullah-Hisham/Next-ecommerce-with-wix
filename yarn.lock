@@ -564,7 +564,7 @@
     "@wix/sdk-runtime" "^0.2.10"
     "@wix/sdk-types" "^1.6.2"
 
-"@wix/members@^1.0.77":
+"@wix/members@^1.0.82":
   version "1.0.82"
   resolved "https://registry.npmjs.org/@wix/members/-/members-1.0.82.tgz"
   integrity sha512-ud9ENQR+SObVbHctOh0+QwTjRUS+0XxxSWyvY+u6iyzbrM/bVn+5Rn3Llzv44cFOjUUjHTzUsbiXAmapOaaaHw==

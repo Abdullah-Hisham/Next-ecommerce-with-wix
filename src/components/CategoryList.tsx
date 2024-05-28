@@ -9,6 +9,7 @@ const CategoryList = async () => {
 
         return (
         <div className="px-4 overflow-x-scroll scrollbar-hide">
+                hello nice to met you
         <div className="flex gap-4 md:gap-8">
         {cats.items.map((item) => (
         <Link

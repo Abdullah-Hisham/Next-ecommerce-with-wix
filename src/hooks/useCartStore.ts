@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { currentCart } from "@wix/ecom";
 import { WixClient } from "@/context/wixContext";
-import { cart } from "@wix/ecom";
+
 type CartState = {
-        cart: cart.LineItem;
+        cart: currentCart.Cart;
         isLoading: boolean;
         counter: number;
         getCart: (wixClient: WixClient) => void;
@@ -15,6 +15,7 @@ type CartState = {
         ) => void;
         removeItem: (wixClient: WixClient, itemId: string) => void;
 };
+
 export const useCartStore = create<CartState>((set) => ({
         cart: [],
         isLoading: true,
@@ -45,6 +46,7 @@ export const useCartStore = create<CartState>((set) => ({
         },
         ],
         });
+
         set({
         cart: response.cart,
         counter: response.cart?.lineItems.length,
@@ -56,6 +58,7 @@ export const useCartStore = create<CartState>((set) => ({
         const response = await wixClient.currentCart.removeLineItemsFromCurrentCart(
         [itemId]
         );
+
         set({
         cart: response.cart,
         counter: response.cart?.lineItems.length,
